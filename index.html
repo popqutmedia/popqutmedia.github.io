@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-729QVZ8K6G"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-729QVZ8K6G');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Popqut Media</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Dividers with Black Lines</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        background-color: #f0f0f0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+</style>
 </head>
 <body>
-    <div id="welcome-message">
-        Welcome to Popqut Media, which one of our related services would you like to start with?
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to Popqut Media!</h2>
+            <p>If you're just dropping by, or are a creator whose heard of our platform,
+                <br>
+                welcome to our official business page! As a starter, we'll let you know what
+                <br>
+                we're about. Popqut Media is a early-stage digital agency, focused on helping
+                <br>
+                a wide variety of content creators in both music and video games, develop and
+                <br>
+                unify their brand in order to attract bigger audiences. Inspired by the creative
+                <br>
+                outflow of other musicians and game developers alike, on both ends we offer services
+                <br>
+                relating to marketing products, consulting on individual work, and overall building
+                <br>
+                an avenue for open-minded people to thrive in a constantly shifting world, partially
+                <br>
+                driven by the ever-going technology of AI.
+                <br><br>
+                So, are you interested in joining us? Our services are split between two sub-services,
+                <br>
+                Popqut Games and Popqut Music. To start with either of our services, please click one of
+                <br>
+                the two buttons below to access our options. 
+            </p>
+        </div>
     </div>
-
-    <div id="buttons-container">
-        <a href="https://popqutgames.github.io" class="round-button" id="video-games-button">Video Games</a>
-        <a href="https://popqutmusic.github.io" class="round-button" id="music-button">Music</a>
+    <div class="content">
+        <h2>Second Divider</h2>
+        <p>This is the content of the second divider.</p>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>Third Divider</h2>
+            <p>This is the content of the third divider.</p>
+        </div>
     </div>
 </body>
 </html>
