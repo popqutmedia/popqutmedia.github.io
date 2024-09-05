@@ -1,118 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Three Dividers with Hover Effect</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    .container {
-        width: 100%;
-        background-color: #f0f0f0;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        box-sizing: border-box;
-    }
-
-    .content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    /* Hover effect for second and third dividers */
-    .content:nth-of-type(2):hover .hover-button,
-    .content:nth-of-type(3):hover .hover-button {
-        transform: translateX(100%);
-    }
-
-    .hover-button {
-        position: absolute;
-        top: 0;
-        right: 100%;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding-right: 20px;
-    }
-
-    .hover-button span {
-        color: white;
-        font-weight: bold;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popqut Media</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3f; /* Dark blue background */
+            color: white;
+        }
+        .header-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  /* First row with 3 columns */
+            grid-template-rows: auto auto;         /* Two rows */
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item a {
+            display: block;
+        }
+        /* Center the two images in the second row */
+        .gallery-item:nth-child(4),
+        .gallery-item:nth-child(5), 
+            grid-column: span 1; /* Each item takes 1 column */
+        
+        .gallery-item:nth-child(4) {
+            grid-column-start: 2; /* Start the first item in the second row from column 2 */
+        }
+        .gallery-item:nth-child(21) {
+            grid-column-start: 2; /* Start the first item in the second row from column 2 */
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h2>Welcome to Popqut Media</h2>
-            <p>
-                If you're just dropping by, or are a creator whose heard of our platform,
-                welcome to our official business page! As a starter, we'll let you know what
-                we're about. Popqut Media is a early-stage digital agency, focused on helping
-                a wide variety of content creators in both music and video games, develop and
-                unify their brand in order to attract bigger audiences. Inspired by the creative
-                outflow of other musicians and game developers alike, on both ends we offer services
-                relating to marketing products, consulting on individual work, and overall building
-                an avenue for open-minded people to thrive in a constantly shifting world, partially
-                driven by the ever-going technology of AI.
-                <br><br>
-                So, are you interested in joining us? Our services are split between two sub-services,
-                Popqut Games and Popqut Music. To start with either of our services, please click one of
-                the two buttons below to access our options.        
-            </p>
+
+    <div class="header-image">
+        <img src="webpage (logo).png" alt="Popqut Media">
+    </div>
+    <br><br><br><br><br><br>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <a href="popqutmusic.github.io" target="_blank">
+                <img src="popqutmusic (logo).png" alt="Business 1">
+            </a>
+        </div>
+        
+        <div class="gallery-item">
+            <a href="popqutgames.github.io" target="_blank">
+                <img src="popqut games (logo).png" alt="Business 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="noveltyboycanada.github.io" target="_blank">
+                <img src="noveltyboy(logo).png" alt="Business 3">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="blockchainuniversityedu.github.io" target="_blank">
+                <img src="blockchainuniedu(logo).png" alt="Business 4">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://www.youtube.com/@nothingcontest" target="_blank">
+                <img src="nothingcontest(logo).png" alt="Business 5">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <!-- <a href="https://www.youtube.com/@nothingcontest" target="_blank"> !-->
+                <img src="neweranorth(logo).png" alt="Business 5">
+            </a>
         </div>
     </div>
-    <div class="content">
-        <h2>Popqut Games</h2>
-        <p>
-            In the thriving world of video game development,
-            <br>
-            developers need to find an avenue for creation
-            <br>
-            that will upmost re-design and push forward
-            <br>
-            newer experiences for communities they're
-            <br>
-            reaching for. Popqut Games helps with
-            <br>
-            this service, please click the button
-            <br>
-            below to find out more.
-        </p>
-        <div class="hover-button">
-            <span><button><a href="https://popqutgames.github.io">ACCESS</span></button></a>
-        </div>
-    </div>
-    <div class="content">
-        <h2>Popqut Music</h2>
-        <p>
-            Are you an artist or creator seeking help with
-            <br>
-            adding unique feel to your music? Popqut Music
-            <br>
-            is a service that offers to create content that
-            <br>
-            will repurpose and develop a diverse way of
-            <br>
-            reaching new audiences. Interested? Find out more.
-        </p>
-        <div class="hover-button">
-            <span><button><a href="https://popqutmusic.github.io">ACCESS</span></button></a>
-        </div>
-    </div>
-    </div>
-    <center><h3>Content</h3><h2>is</h2><h1>momentum.</h1></center>
+
 </body>
 </html>
