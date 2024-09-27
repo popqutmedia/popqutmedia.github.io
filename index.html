@@ -14,55 +14,50 @@
     <title>Popqut Media</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #001f3f; /* Dark blue background */
-            color: white;
-        }
-        .header-image {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .header-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);  /* First row with 3 columns */
-            grid-template-rows: auto auto;         /* Two rows */
-            gap: 15px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .gallery-item {
-            overflow: hidden;
-            transition: transform 0.2s ease;
-        }
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .gallery-item a {
-            display: block;
-        }
-        /* Center the two images in the second row */
-        .gallery-item:nth-child(4),
-        .gallery-item:nth-child(5), 
-            grid-column: span 1; /* Each item takes 1 column */
-        
-        .gallery-item:nth-child(4) {
-            grid-column-start: 2; /* Start the first item in the second row from column 2 */
-        }
-        .gallery-item:nth-child(21) {
-            grid-column-start: 2; /* Start the first item in the second row from column 2 */
-        }
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        padding: 0;
+        background-color: #00d2ee; /* Dark blue background */
+        color: white;
+    }
+    .header-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .header-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .gallery-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;  /* Three columns */
+        gap: 15px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        /* Shift the gallery to the right */
+        margin-right: 140px; /* Adjust this value as needed to align with the logo */
+    }
+    .gallery-item {
+        overflow: hidden;
+        transition: transform 0.2s ease;
+    }
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .gallery-item a {
+        display: block;
+    }
+    /* Adjust the two images in the second row */
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4) {
+        grid-column: 2 / 3; /* Centered in the middle column */
+    }
     </style>
 </head>
 <body>
@@ -73,28 +68,23 @@
     <br><br><br><br><br><br>
     <div class="gallery-container">
         <div class="gallery-item">
-            <a href="https://popqutmusic.github.io" target="_blank">
+            <a href="https://linktr.ee/popqutmusic" target="_blank">
                 <img src="popqutmusic (logo).png" alt="Business 1">
             </a>
         </div>
-        
         <div class="gallery-item">
-            <a href="https://popqutgames.github.io/" target="_blank">
+            <a href="https://linktr.ee/popqutgames" target="_blank">
                 <img src="popqut games (logo).png" alt="Business 2">
             </a>
         </div>
-        <div class="gallery-item">
-            <a href="https://blockchainuniversityedu.github.io" target="_blank">
-                <img src="blockchainuniedu(logo).png" alt="Business 4">
-            </a>
-        </div>
+        <br><br>
         <div class="gallery-item">
             <a href="https://https://www.youtube.com/@nothingcontest" target="_blank">
                 <img src="nothingcontest(logo).png" alt="Business 5">
             </a>
         </div>
         <div class="gallery-item">
-            <!-- <a href="https://www.youtube.com/@nothingcontest" target="_blank"> !-->
+            <!-- <a href="" target="_blank"> !-->
                 <img src="neweranorth(logo).png" alt="Business 5">
             </a>
         </div>
