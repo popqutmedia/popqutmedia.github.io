@@ -29,34 +29,36 @@
         height: auto;
     }
     .gallery-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;  /* Three columns */
+        display: flex;
+        flex-direction: column;
         gap: 15px;
         padding: 20px;
         max-width: 1200px;
         margin: 0 auto;
-        /* Shift the gallery to the right */
-        margin-right: 127px; /* Adjust this value as needed to align with the logo */
     }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 0 auto;
+    }
+
     .gallery-item {
-        overflow: hidden;
-        transition: transform 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease; /* Smooth transition for the hover effect */
     }
+
     .gallery-item:hover {
-        transform: scale(1.05);
+        transform: scale(1.05); /* Makes the banner 5% larger when hovered */
     }
+
     .gallery-item img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
-        display: block;
-    }
-    .gallery-item a {
-        display: block;
-    }
-    /* Adjust the two images in the second row */
-    .gallery-item:nth-child(3),
-    .gallery-item:nth-child(4) {
-        grid-column: 2 / 3; /* Centered in the middle column */
+        transition: all 0.3s ease; /* Smooth transition for any image changes */
     }
     </style>
 </head>
@@ -67,38 +69,46 @@
     </div>
     <br><br><br>
     <div class="gallery-container">
-        <br><br>
-        <div class="gallery-item">
-            <a href="https://https://www.youtube.com/@nothingcontest" target="_blank">
-                <img src="nothingcontest(logo).png" alt="nothingcontest.">
-            </a>
+        <!-- First Row -->
+        <div class="row">
+            <div class="gallery-item">
+                <a href="https://rumble.com/user/noviewschannel" target="_blank">
+                    <img src="noviews (logo).png" alt="No Views Channel">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://linktr.ee/noveltyboynorth" target="_blank">
+                    <img src="noveltyboy(logo).png" alt="Novelty Boy North">
+                </a>
+            </div>
         </div>
-        <div class="gallery-item">
-            <!-- <a href="" target="_blank"> !-->
-                <img src="neweranorth(logo).png" alt="new era north">
-            </a>
+
+        <!-- Second Row -->
+        <div class="row">
+            <div class="gallery-item">
+                <a href="https://www.youtube.com/@nothingcontest" target="_blank">
+                    <img src="nothingcontest(logo).png" alt="nothingcontest">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://linktr.ee/theshoutoutguys" target="_blank">
+                    <img src="The Shoutout Guys (logo).png" alt="The Shoutout Guys">
+                </a>
+            </div>
         </div>
-        <br><br>
-        <div class="gallery-item">
-            <a href="https://linktr.ee/theshoutoutguys" target="_blank">
-                <img src="The Shoutout Guys (logo).png" alt="The Shoutout Guys">
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://linktr.ee/noveltyboynorth" target="_blank">
-                <img src="noveltyboy(logo).png" alt="Novelty Boy North">
-            </a>
-        </div>
-        <br><br>
-        <div class="gallery-item">
-            <a href="https://linktr.ee/starmash" target="_blank">
-                <img src="Cringe 2.0(logo).png" alt="Cringe 2.0">
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://rumble.com/user/noviewschannel" target="_blank">
-                <img src="noviews (logo).png" alt="No Views Channel">
-            </a>
+
+        <!-- Third Row -->
+        <div class="row">
+            <div class="gallery-item">
+                <!-- <a href="" target="_blank"> -->
+                    <img src="neweranorth(logo).png" alt="new era north">
+                <!-- </a> -->
+            </div>
+            <div class="gallery-item">
+                <a href="https://linktr.ee/starmash" target="_blank">
+                    <img src="Cringe 2.0(logo).png" alt="Cringe 2.0">
+                </a>
+            </div>
         </div>
     </div>
 </body>
